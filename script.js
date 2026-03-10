@@ -1,4 +1,23 @@
 import { Color } from './color.js'
+import { nameTheColor } from './colorModal.js';
+
+let nameAColorButton = document.getElementById("nameColor");
+let colorModal = document.getElementById("colorModal");
+let closeModalButton = document.getElementById("xButton");
+
+const colorPickers = document.getElementsByClassName("picker");
+for (const picker of colorPickers){
+    picker.addEventListener("mouseup", nameTheColor);
+}
+
+nameAColorButton.onclick = function(){
+    colorModal.style.display = "block";
+}
+
+closeModalButton.onclick = function(){
+    colorModal.style.display = "none";
+}
+
 
 function appendCategories(category) {
     let colorsDiv = document.getElementById("colors")
@@ -26,7 +45,6 @@ onmousemove = updateBoxShadow
 
 function updateBoxShadow(e) {
 
-
     let colorsList = document.getElementsByClassName("aColor");
 
     for (let tempColor of colorsList) {
@@ -45,6 +63,7 @@ function updateBoxShadow(e) {
 
     }
 }
+
 
 let colors = [
     new Color("Pumpkin", "orange", 255, 117, 24),
@@ -84,7 +103,6 @@ let colors = [
     new Color("Mango", "orange", 253, 190, 2),
     new Color("Apricot", "orange", 255, 178, 127),
     new Color("Sunset Orange", "orange", 253, 94, 83),
-
     new Color("Chili Red", "red", 205, 28, 24),
     new Color("Ruby", "red", 224, 17, 95),
     new Color("Vermilion", "red", 231, 49, 33),

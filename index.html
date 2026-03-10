@@ -25,12 +25,39 @@
             <li id="purple">Purples</li>
             <li id="neutral">Neutrals</li>
         </ul>
-        <a id="create"><p>Create A Color</p></a>
+        <div id="nameColor"><p>Name A Color</p></div>
     </header>
 
     <div id="colors"></div>
 
+        <div id="colorModal">
+            <div id="xButton">X</div>
+            <div class="titleAndName">
+                <h2>Name A Color:</h2>
+                <div id="name"></div> 
+            </div>
+            <div class="colorAndPickers">
+                <div id="color"></div>
+                <div class="colorPickers">
+                    <p>Hue</p>
+                    <div id="hue" class="pickerBackground">
+                        <input id="huePicker" class="picker" type="range" min="0" max="360" value="0">
+                    </div>
+                    <p>Value</p>
+                    <div id="value" class="pickerBackground">
+                        <input id="valuePicker" class="picker" type="range" min="0" max="100" value="50">
+                    </div>
+                    <p>Saturation</p>
+                    <div id="saturation" class="pickerBackground">
+                        <input id="saturationPicker" class="picker" type="range" min="0" max="100" value="100">
+                    </div>
 
+
+                </div>
+        </div>
+
+
+    <script type="module" src="colorModal.js"></script>
     <script type="module" src="script.js"></script>
     <script type="module" src="color.js"></script>
 </body>
